@@ -1,8 +1,20 @@
 <mat-toolbar color="primary">
   <span>{{ title }}</span>
+
+  <span fxFlex></span>
+
+  <span class="example-spacer"></span>
+
+  <button mat-icon-button
+  aria-label="People list"
+  matTooltip="Usuários"
+  routerLink="/people"
+  >
+  <mat-icon>group</mat-icon>
+  </button>
 </mat-toolbar>
 
 <div class="content">
-<app-peoples></app-peoples>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
 </div>
