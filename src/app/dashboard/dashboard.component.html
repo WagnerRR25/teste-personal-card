@@ -8,7 +8,7 @@ fxLayoutAling="space-between"
 >
 <mat-card
 class="pointer"*ngFor="let people of peoples"
-routerLink="/peoples/{{ people.id }}"
+[routerLink]="['/peoples', people.id ]"
 >
     <mat-card-title>{{ people.name }}</mat-card-title>
     <mat-card-title>{{ people.email }}</mat-card-title>

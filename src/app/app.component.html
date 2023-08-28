@@ -1,27 +1,7 @@
-<mat-toolbar color="primary">
-  <span>{{ title }}</span>
-
-  <span fxFlex></span>
-
-  <span class="example-spacer"></span>
-  <button mat-icon-button
-  aria-label="Dashboard"
-  matTooltip="Dashboard"
-  routerLink="/dashboard"
-  >
-  <mat-icon>dashboard</mat-icon>
-  </button>
-
-  <button mat-icon-button
-  aria-label="People list"
-  matTooltip="Usuários"
-  routerLink="/people"
-  >
-  <mat-icon>group</mat-icon>
-  </button>
-</mat-toolbar>
+<app-toolbar [title]="title" [menuItems]="menuItems"></app-toolbar>
 
 <div class="content" fxLayoutGap="2rem">
 <router-outlet></router-outlet>
+
 <app-messages></app-messages>
 </div>

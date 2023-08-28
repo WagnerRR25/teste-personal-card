@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { People } from '../people.model'
-import { PeopleService } from '../people.service';
+import { People } from '../../../core/models/people.model'
+import { PeopleService } from '../../../core/services/people.service';
 
 @Component({
   selector: 'app-peoples',
@@ -8,6 +8,7 @@ import { PeopleService } from '../people.service';
   styleUrls: ['./peoples.component.scss']
 })
 export class PeoplesComponent implements OnInit {
+  displayedCollumns: string[] = ['id', 'name', 'email']
   peoples: People[] = [];
 
   constructor(

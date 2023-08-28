@@ -1,4 +1,4 @@
-import { People } from "./people.model";
+import { People } from "../models/people.model";
 
 
 export const PEOPLES: People[] = [

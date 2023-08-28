@@ -1,0 +1,32 @@
+<div *ngIf="people">
+  <h1>{{ people.name | uppercase }} Details</h1>
+
+  <mat-card>
+    <mat-card-content fxLayout="column">
+      <mat-form-field appearance="fill">
+        <mat-label>id</mat-label>
+        <input matInput disabled [value]="people.id"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>People name</mat-label>
+        <input
+         id="name"
+         [(ngModel)]="people.name"
+         placeholder="name"
+         type="text" />
+
+        <mat-label>People email</mat-label>
+        <input
+        id="email"
+        [(ngModel)]="people.email"
+        placeholder="name"
+        type="text" />
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button (click)="goBack()">Voltar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

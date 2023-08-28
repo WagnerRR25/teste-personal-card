@@ -1,0 +1,28 @@
+<h1>Peoples</h1>
+
+
+<mat-table [dataSource]="peoples" class="mat-elevation-z8">
+  <!-- id -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+  </ng-container>
+
+  <!-- name -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+  </ng-container>
+
+  <!-- email -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> email </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+  </ng-container>
+
+  <!-- Header and Row Declarations -->
+  <mat-header-row *matHeaderRowDef="displayedCollumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedCollumns"
+  [routerLink]="['/peoples',row.id]">
+</mat-row>
+</mat-table>

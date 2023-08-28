@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { PEOPLES } from './mock-peoples'
-import { People } from './people.model';
+import { People } from '../models/people.model';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 
@@ -23,3 +23,5 @@ export class PeopleService {
     return of(people);
   }
 }
+export { People };
+

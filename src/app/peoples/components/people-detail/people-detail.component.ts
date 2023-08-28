@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { People } from '../people.model';
-import { PeopleService } from '../people.service';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { People } from '../../../core/models/people.model';
+import { PeopleService } from '../../../core/services/people.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -12,7 +13,7 @@ export class PeopleDetailComponent implements OnInit {
   people!: People
 
   constructor(private peopleService: PeopleService,
-    private lacation: Location,
+    private location: Location,
     private route: ActivatedRoute
     ) {}
 
@@ -25,7 +26,7 @@ export class PeopleDetailComponent implements OnInit {
       this.peopleService.getPeople(id).subscribe((people) => (this.people =people))
     }
 
-    /* goBack(): void {
-      this.lacation.back();
-    } */
+    goBack(): void {
+      this.location.back();
+    }
 }

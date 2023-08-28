@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PeopleService } from '../people.service';
-import { People } from '../people.model';
+import { PeopleService } from '../core/services/people.service';
+import { People } from '../core/models/people.model';
 
 @Component({
   selector: 'app-dashboard',
