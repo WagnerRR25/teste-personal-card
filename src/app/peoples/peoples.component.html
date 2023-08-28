@@ -1,9 +1,24 @@
-<h2>{{ people.name | uppercase }} Details</h2>
-<div><span>id: </span>{{people.id}}</div>
-<div><span>name: </span>{{people.name}}</div>
-<div><span>email: </span>{{people.email}}</div>
+<h2>My Peoples</h2>
+
+<ul class="people">
+  <li *ngFor="let people of peoples"
+  [class.selected]="people === selectedPeople"
+  (click)="onSelect(people)">
+    <span>{{people.id}}</span>
+    <span>{{people.name}}</span>
+    <span>{{people.email}}</span>
+  </li>
+</ul>
+
+
+<div *ngIf="selectedPeople">
+  <h2>{{ selectedPeople.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedPeople.id}}</div>
+  <div><span>name: </span>{{selectedPeople.name}}</div>
+  <div><span>email: </span>{{selectedPeople.email}}</div>
 
 <div>
   <label for="name" >people name:</label>
-  <input id="name" [(ngModel)]="people.name" placeholder="name" type="text" />
+  <input id="name" [(ngModel)]="selectedPeople.name" placeholder="name" type="text" />
+</div>
 </div>
