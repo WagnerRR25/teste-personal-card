@@ -8,12 +8,6 @@ import { PEOPLES } from '../mock-peoples'
   styleUrls: ['./peoples.component.scss']
 })
 export class PeoplesComponent {
-  people: People = {
-    id: 1,
-    name: 'WagnerRR25',
-    email: 'rr25wagner@gmail.com'
-  };
-
   peoples = PEOPLES;
   selectedPeople?: People;
 
