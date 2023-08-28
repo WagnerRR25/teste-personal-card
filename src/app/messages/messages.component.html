@@ -3,7 +3,7 @@
     <mat-expansion-panel expanded="true">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Messages
+          Mensagens
         </mat-panel-title>
         <mat-panel-description>
           {{messageService.getMessages().length}} record(s)
@@ -11,7 +11,7 @@
       </mat-expansion-panel-header>
 
       <p>
-      <button color="accent" mat-raised-button (click)="messageService.clear()">Clear Messages</button>
+      <button color="accent" mat-raised-button (click)="messageService.clear()">Limpar mensagens</button>
       </p>
 
       <div *ngFor="let message of messageService.getMessages()">

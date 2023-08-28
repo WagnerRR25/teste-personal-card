@@ -1,12 +1,11 @@
-<h2>My People</h2>
+<h1>Peoples</h1>
 
-<ul class="people">
+<ul class="peoples">
   <li *ngFor="let people of peoples"
-  [class.selected]="people === selectedPeople"
-  (click)="onSelect(people)">
+  routerLink="/peoples/{{people.id}}"
+  >
     <span>{{people.id}}</span>
     <span>{{people.name}}</span>
     <span>{{people.email}}</span>
   </li>
 </ul>
-<app-people-detail [people]="selectedPeople"></app-people-detail>

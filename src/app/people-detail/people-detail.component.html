@@ -1,5 +1,5 @@
 <div *ngIf="people">
-  <h2>{{ people.name | uppercase }} Details</h2>
+  <h1>{{ people.name | uppercase }} Details</h1>
   <div><span>id: </span>{{people.id}}</div>
   <div><span>name: </span>{{people.name}}</div>
   <div><span>email: </span>{{people.email}}</div>
@@ -8,4 +8,6 @@
   <label for="name" >people name:</label>
   <input id="name" [(ngModel)]="people.name" placeholder="name" type="text" />
 </div>
+
+<!-- <button mat-raised-button (click)="goBack()">Voltar</button> -->
 </div>

@@ -1,0 +1,16 @@
+<h1>Dashboard</h1>
+
+<div
+fxLayout="row"
+fxLayoutGap="2rem"
+fxLayout.xs="column"
+fxLayoutAling="space-between"
+>
+<mat-card
+class="pointer"*ngFor="let people of peoples"
+routerLink="/peoples/{{ people.id }}"
+>
+    <mat-card-title>{{ people.name }}</mat-card-title>
+    <mat-card-title>{{ people.email }}</mat-card-title>
+  </mat-card>
+</div>

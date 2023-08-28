@@ -16,4 +16,10 @@ export class PeopleService {
     this.messageService.add('PeopleService: fetched peoples');
     return peoples;
   }
+
+  getPeople(id: number): Observable<People> {
+    const people = PEOPLES.find(people => people.id === id)!;
+    this.messageService.add(`PeopleService: fetched people id=${id}`);
+    return of(people);
+  }
 }

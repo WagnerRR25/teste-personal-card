@@ -10,16 +10,20 @@ import {MatButtonModule} from '@angular/material/button';
 import { MessagesComponent } from './messages/messages.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatListModule } from '@angular/material/list'
 
 @NgModule({
   declarations: [
     AppComponent,
     PeoplesComponent,
     PeopleDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTooltipModule,
     MatIconModule,
     AppRoutingModule,
+    MatCardModule,
+    MatListModule,
     FlexLayoutModule
   ],
   providers: [],
