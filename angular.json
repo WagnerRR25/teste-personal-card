@@ -69,7 +69,8 @@
               "browserTarget": "teste-personal-card:build:production"
             },
             "development": {
-              "browserTarget": "teste-personal-card:build:development"
+              "browserTarget": "teste-personal-card:build:development",
+              "proxyConfig": "src/proxyConfig.json"
             }
           },
           "defaultConfiguration": "development"

@@ -9,14 +9,14 @@ const routes: Routes = [
     loadChildren: () =>
     import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
-  {
+/*   {
     path: 'peoples',
     loadChildren: () =>
     import('./peoples/peoples.module').then((m) => m.PeoplesModule),
-  },
+  }, */
   {
     path: '**',
-    component: PageNotFoundComponent
+    component: PageNotFoundComponent,
 
   }
 ];
